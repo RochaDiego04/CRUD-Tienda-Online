@@ -3,8 +3,10 @@
     --fuenteParrafos: 'Open Sans', sans-serif;
     
     --primario: #c7f9f9;
+    --secundario: #efc7f9;
     --blanco: #ffffff;
-    --gris: #e1e1e1;
+    --gris: #373e43;
+    --grisOscuro: #30363a;
     --negro: #000000;
 }
 
@@ -21,6 +23,7 @@ body{
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
     line-height: 2; /*Interlineado para el blog*/
+    background-color: var(--gris);
 }
 
 /** Globales **/
@@ -181,4 +184,55 @@ img{
     background-color: var(--negro);
     padding-bottom: 3rem;
     margin-top: 4rem;
+}
+
+/**  Grid **/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr); /*1fr 1fr*/
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3,1fr); /*1fr 1fr*/
+    }
+}
+
+
+/** Productos **/
+.titulo__producto{
+    text-align: center;
+    font-family: var(--fuenteHeading);
+    background-image: linear-gradient(43deg, var(--secundario) 0%, var(--blanco)  30%, var(--primario)  100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 4px 2.5px 0 #00000049;
+}
+
+.producto {
+    background-color: var(--grisOscuro);
+    padding: 1rem;
+}
+
+.producto__imagen {
+    width: 100%;
+}
+
+.producto__nombre {
+    font-size: 2rem;
+    color: var(--blanco);
+}
+
+.producto__precio {
+    font-size: 1.7rem;
+    color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
 }

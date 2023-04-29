@@ -7,7 +7,7 @@
     <title>Ventas de Sne</title>
     <meta name="description" content="Página web de tennis" />
 
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
 
     <link rel="preload" href="css/normalize.css" as="style" />
     <link rel="stylesheet" href="css/normalize.css" as="style" />
