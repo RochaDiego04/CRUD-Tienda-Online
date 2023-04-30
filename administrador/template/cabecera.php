@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+        <?php $url="http://".$_SERVER['HTTP_HOST']."/CRUD_ventas" ?>
         <nav class="navbar navbar-expand navbar-light bg-light">
-            <div class="nav navbar-nav">
+            <div class="nav navbar-nav"> <!--Es necesario hacer echo de la url para que se escriba primero y despues a donde queremos ir-->
                 <a class="nav-item nav-link active" href="#">Administrador de sitio web<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Inicio</a>
-                <a class="nav-item nav-link" href="#">Sneakers</a>
-                <a class="nav-item nav-link" href="#">Cerrar Sesión</a>
-                <a class="nav-item nav-link" href="#">Ver Sitio Web</a>
+                <a class="nav-item nav-link" href="<?php echo $url;?>/administrador/inicio.php">Inicio</a>
+                
+                <a class="nav-item nav-link" href="<?php echo $url;?>/administrador/seccion/productos.php">Sneakers</a>
+                <a class="nav-item nav-link" href="<?php echo $url;?>/administrador/seccion/cerrar.php">Cerrar Sesión</a>
+                
+                <a class="nav-item nav-link" href="<?php echo $url;?>">Ver Sitio Web</a>
             </div>
         </nav>
 
