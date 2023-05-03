@@ -1,46 +1,34 @@
 <?php include("template/cabecera.php"); ?>
 
-<main class="contenedor">
-        <h1 class="titulo__producto ">Nuestros productos</h1>
+<?php
+include("administrador/config/bd.php");
+$sentenciaSQL= $conexion->prepare("SELECT * FROM productos");
+$sentenciaSQL->execute();
+$listaProductos=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
-        <div class="grid">
+
+?>
+<h1 class="titulo__producto ">Nuestros productos</h1>
+<main class="contenedor">
+<div class="grid">
+<?php 
+        foreach($listaProductos as $producto){
+
+?>
             <div class="producto">
                 <a href="#">
-                    <img class="producto__imagen"src="img/nike_blazer_lucky_charms.jpg">
+                    <img class="producto__imagen"src="./img/<?php echo $producto['imagen'] ?>">
                     <div class="producto__informacion">
-                        <p class="producto__nombre">Nike Blazer Lucky Charms</p>
-                        <p class="producto__precio">$25</p>
+                        <p class="producto__nombre"><?php echo $producto['nombre'];?></p>
+                        <p class="producto__precio">$<?php echo $producto['precio'];?></p>
                     </div>
                 </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="#">
-                    <img class="producto__imagen"src="img/jordan_1_psg.jpg">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">Jordan 1 PSG</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="#">
-                    <img class="producto__imagen"src="img/jordan_1_silver_toe.jpg">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">Jordan 1 Silver Toe</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-            <div class="producto">
-                <a href="#">
-                    <img class="producto__imagen"src="img/jordan_1_mid_union_black_toe.jpg">
-                    <div class="producto__informacion">
-                        <p class="producto__nombre">Jordan 1 Mid Union Black Toe</p>
-                        <p class="producto__precio">$25</p>
-                    </div>
-                </a>
-            </div> <!--.producto-->
-        </div>
-    </main>
+            </div>
+        
+
+
+<?php } ?>  
+</div>  
+</main>
 
 <?php include("template/pie.php"); ?>
