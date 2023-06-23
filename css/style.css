@@ -218,6 +218,8 @@ img{
 
 .producto__imagen {
     width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
 }
 
 .producto__nombre {
@@ -308,10 +310,16 @@ img{
 
 .formulario{
     background-color: var(--grisOscuro);
-    margin: -10rem auto 17rem auto;
+    margin: -25rem auto 17rem auto;
     width: 95%;
     padding: 3rem;
     color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .formulario{
+        margin: -10rem auto 17rem auto;
+    }
 }
 
 .campo {
@@ -320,7 +328,7 @@ img{
 }
 
 .campo__label {
-    flex: 0 0 7.9rem;
+    flex: 0 0 8rem;
     text-align: right;
     padding-right: 2rem;
     color: var(--blanco);

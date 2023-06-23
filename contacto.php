@@ -14,7 +14,7 @@
                 <input class = "campo__field" type="email" placeholder="Tu E-mail" id="email">
             </div>
             <div class="campo">
-                <label class = "campo__label" for="mensaje">Texto </label>
+                <label class = "campo__label" for="mensaje">Texto</label>
                 <textarea class = "campo__field campo__field--textarea" id="mensaje"></textarea>
             </div>
 

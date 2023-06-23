@@ -20,4 +20,5 @@
             <img class="nosotros__imagen" src="img/nosotros.jpg">
         </div>
     </main>
+    
 <?php include("template/pie.php"); ?>
